@@ -1,5 +1,6 @@
 CC=cc
-FLAGS=-std=c99 -Wall
+LIBS=-ledit
+FLAGS=-std=c99 -Wall $(LIBS)
 
 targets= prompt
 
