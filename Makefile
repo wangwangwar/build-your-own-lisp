@@ -1,12 +1,12 @@
 CC=cc
-LIBS=-ledit
+LIBS=-ledit -lm
 FLAGS=-std=c99 -Wall $(LIBS)
 
-targets= prompt
+targets= parsing
 
 all: $(targets)
 
-prompt: prompt.c
+parsing: parsing.c mpc/mpc.c
 	$(CC) $(FLAGS) -o $@ $<
 
 clean:
