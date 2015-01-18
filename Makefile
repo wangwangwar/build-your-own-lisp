@@ -6,8 +6,8 @@ targets= parsing
 
 all: $(targets)
 
-parsing: parsing.c mpc/mpc.c
-	$(CC) $(FLAGS) -o $@ $<
+parsing: parsing.c ./mpc/mpc.c
+	$(CC) $(FLAGS) -o $@ parsing.c mpc/mpc.c
 
 clean:
 	-rm -f $(targets) *.o
